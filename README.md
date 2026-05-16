@@ -8,9 +8,9 @@
 
 [Buraya screenshot eklenecek]
 
-## 🚀 Canlı Uygulama
+##  Canlı Uygulama
 
-[Streamlit Cloud linki eklenecek]
+https://telco-churn-prediction-glgke5fgmt8474audr58vs.streamlit.app
 
 ---
 
