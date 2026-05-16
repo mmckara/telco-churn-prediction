@@ -1,0 +1,16 @@
+﻿Degisken,Chi2,p_degeri,SerbestlikDerecesi,Anlamli_mi
+Contract,1184.6,0.0,2,EVET
+OnlineSecurity,850.0,0.0,2,EVET
+TechSupport,828.2,0.0,2,EVET
+InternetService,732.31,0.0,2,EVET
+PaymentMethod,648.14,0.0,3,EVET
+OnlineBackup,601.81,0.0,2,EVET
+DeviceProtection,558.42,0.0,2,EVET
+StreamingMovies,375.66,0.0,2,EVET
+StreamingTV,374.2,0.0,2,EVET
+PaperlessBilling,258.28,0.0,1,EVET
+Dependents,189.13,0.0,1,EVET
+Partner,158.73,0.0,1,EVET
+MultipleLines,11.33,0.003464,2,EVET
+PhoneService,0.92,0.338783,1,HAYIR
+gender,0.48,0.486579,1,HAYIR

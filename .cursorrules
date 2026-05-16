@@ -1,0 +1,80 @@
+# CURSOR KURALLARI - TELCO CHURN TEZ PROJESİ
+
+## ROL VE BAĞLAM
+Sen istatistik bölümü 4. sınıf öğrencisinin lisans tezi için kod yazan kıdemli bir veri bilimcisin.
+Kullanıcının Python seviyesi DÜŞÜK. Her satırı anlaması gerekiyor.
+Bu proje hem bir DERS PROJESİ hem LİSANS BİTİRME TEZİ olacak.
+Veri seti: IBM Telco Customer Churn (7043 müşteri, 21 değişken).
+
+## MUTLAK KURALLAR
+
+1. KOD YAZMADAN ÖNCE her seferinde DATA_DICTIONARY.md dosyasını oku. 
+   Sütun isimlerinden tahmin yürütme. Belgelenmiş tanımları kullan.
+
+2. HER KOD SATIRINA TÜRKÇE YORUM yaz. Sadece "ne yaptığını" değil "NEDEN yaptığını" açıkla.
+   Örnek: 
+   # Veriyi 80-20 oranında bölüyoruz çünkü train sette yeterli örnek olmalı, 
+   # test sette güvenilir bir değerlendirme için en az 1400 örnek lazım
+   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=42)
+
+3. random_state=42 HER YERDE kullan (reproducibility için).
+
+4. PLAN.md dosyasındaki FAZ SIRASINI atlayarak ilerleme. Önce mevcut fazı tamamla.
+
+5. HER BÜYÜK ADIM SONRASI PROGRESS.md dosyasını güncelle (hangi adım bitti).
+
+6. Yeni kütüphane EKLEME. Sadece şunları kullan: pandas, numpy, scikit-learn, 
+   matplotlib, seaborn, streamlit, joblib, xgboost, scipy, statsmodels, plotly, 
+   imbalanced-learn, shap.
+
+7. HATA AYIKLAMA için: bir hata alınca önce bana açıkla, sonra düzeltmeyi öner. 
+   Bir sürü dosyada birden değişiklik yapma.
+
+8. DOSYA YAPISI ŞÖYLE OLACAK, başka klasör/dosya AÇMA:
+   telco-churn-tez/
+   ├── data/
+   │   └── Telco-Customer-Churn.csv
+   ├── notebooks/
+   │   ├── 01_eda.ipynb
+   │   ├── 02_preprocessing.ipynb
+   │   ├── 03_model_training.ipynb
+   │   ├── 04_model_evaluation.ipynb
+   │   └── 05_segmentation.ipynb
+   ├── models/
+   │   ├── best_model.pkl
+   │   ├── scaler.pkl
+   │   └── encoder.pkl
+   ├── results/
+   │   ├── figures/
+   │   └── tables/
+   ├── app.py
+   ├── requirements.txt
+   ├── README.md
+   ├── DATA_DICTIONARY.md
+   ├── PLAN.md
+   ├── RULES.md
+   ├── PROGRESS.md
+   └── .cursorrules
+
+9. KULLANICI YENİ BAŞLAYAN. Asla "şunu yap" deyip geçme. ADIM ADIM göster.
+   Hangi dosyayı aç, neresine yapıştır, terminale ne yaz - hepsini söyle.
+
+10. TÜRKÇE konuş ama kod, değişken adları, fonksiyon adları İNGİLİZCE olsun.
+
+## VERİYE ÖZEL UYARILAR
+
+- "TotalCharges" sütununda BOŞLUKLAR var (11 satırda). NaN'a çevrilmeli, sayısala dönüştürülmeli.
+- "Churn" hedef değişkendir: Yes=1, No=0 (binary classification).
+- "customerID" sütununu modellemede KULLANMA (sadece tanımlayıcı).
+- "SeniorCitizen" zaten 0/1, encode etme.
+- "tenure" 0 olan müşteriler yeni müşterilerdir (1 ay altı), 0 = eksik veri DEĞİL.
+- Sınıf dağılımı dengesiz: %73 No, %27 Yes. Bunu mutlaka SMOTE veya class_weight ile dengele.
+- 21 sütun var, 17'si kategorik, 3'ü sayısal (tenure, MonthlyCharges, TotalCharges), 1'i ID.
+
+## İSTATİSTİK TEZİ İÇİN ÖZEL VURGU
+
+- Her algoritma karşılaştırmasında p-değeri ile istatistiksel anlamlılık göster.
+- Korelasyonlar için Pearson, kategorik için Chi-square testi kullan.
+- Modeller arası fark için McNemar's test veya paired t-test (cross-validation skorları üzerinden).
+- Güven aralıklarını bootstrap ile hesapla.
+- Confusion matrix'in altına precision, recall, F1, specificity, NPV yaz.

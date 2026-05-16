@@ -1,0 +1,5 @@
+Segment,Müşteri Sayısı,Ort. Tenure (ay),Ort. MonthlyCharges ($),Ort. TotalCharges ($),Churn Oranı (%),En Sık Contract,En Sık PaymentMethod
+0,1159,53.6,34.92,1836.58,5.0,Two year,Bank transfer (automatic)
+1,1904,59.5,93.31,5548.65,15.39,Two year,Bank transfer (automatic)
+2,1704,10.2,31.77,308.96,24.65,Month-to-month,Mailed check
+3,2276,15.4,80.78,1253.01,48.24,Month-to-month,Electronic check

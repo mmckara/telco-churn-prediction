@@ -1,0 +1,4 @@
+Model,Best_Params,Tuned_CV_F1,Tuning_Time_Sec
+Random Forest,"{'max_depth': 20, 'min_samples_split': 2, 'n_estimators': 100}",0.848,3.14
+XGBoost,"{'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 200}",0.835,1.1
+KNN,"{'n_neighbors': 3, 'weights': 'uniform'}",0.8271,0.22

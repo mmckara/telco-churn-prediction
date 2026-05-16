@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+*.log
+.env
+.vscode/
+tez_metinleri.docx
+tez_metinleri.md

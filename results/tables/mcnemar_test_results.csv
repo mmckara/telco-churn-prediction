@@ -1,0 +1,2 @@
+Model_1,Model_2,Both_Correct_a,M1_Correct_M2_Wrong_b,M1_Wrong_M2_Correct_c,Both_Wrong_d,Test_Statistic,P_Value,Alpha,Significant,Interpretation
+Random Forest,XGBoost,1006,57,58,288,57.0,1.0,0.05,False,İki model (Random Forest vs XGBoost) arasındaki performans farkı istatistiksel olarak ANLAMLI DEĞİLDİR (p=1.000000 >= α=0.05).
